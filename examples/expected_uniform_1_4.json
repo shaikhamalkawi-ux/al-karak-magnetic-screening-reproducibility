@@ -1,0 +1,15 @@
+{
+  "start": 1,
+  "end": 4,
+  "weight_class": "uniform",
+  "lower": "-1/4",
+  "upper": "-1/4",
+  "direction": "FIELD",
+  "lower_extreme_end": 4,
+  "upper_extreme_end": 4,
+  "n": 7,
+  "t": 3,
+  "chemical_cutoff_allocations": 1,
+  "statistic": "expected lab-minus-field recorded-high-site recovery over the stated budget class",
+  "scope": "Finite input cohort; exact recorded-value ties only. Not confidence bounds, calibration, future accuracy, measured cost or release authorization."
+}

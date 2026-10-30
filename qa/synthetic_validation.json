@@ -1,0 +1,8 @@
+{
+  "synthetic_datasets": 32,
+  "independently_enumerated_target_sets": 66,
+  "exact_arithmetic_checks": 904,
+  "invalid_inputs_rejected": 11,
+  "status": "PASS",
+  "scope": "Software logic only; no field validation"
+}

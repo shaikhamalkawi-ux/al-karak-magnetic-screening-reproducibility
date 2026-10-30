@@ -1,0 +1,27 @@
+# Executable transient files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.DS_Store
+# Protected source or laboratory records must never be staged
+*.xls
+*.xlsx
+*.doc
+*.docx
+*.tdms
+*.sav
+*.dat
+*.zip
+*_PRIVATE*
+*.key
+*.pem
+.env
+*secret*
+*token*
+# Raw data folders
+private/
+restricted/
+raw/
+source_register/

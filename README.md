@@ -1,43 +1,40 @@
-# Al-Karak magnetic screening — reviewer code and synthetic examples
+# Al-Karak magnetic screening — reviewer code and aggregate-only replay
 
 This public repository supports the paper **Magnetic Soil-Screening Preferences Depend on Chemical Targets and Assay-Budget Range: A Source-Audited Al-Karak Reanalysis**.
 
 **Public reviewer link:** https://github.com/shaikhamalkawi-ux/al-karak-magnetic-screening-reproducibility
 
-## What is public
+## Reproduce the publicly checkable results
 
-- Generic finite-cohort, exact-tie, assay-budget retrieval code (`code/exact_budget_audit.py`).
-- Independent brute-force tests using **synthetic** datasets (`code/test_exact_budget_audit.py`).
-- One explicitly fictional seven-record example and expected outputs (`examples/`).
-- A source-free checker (`code/verify_source_free.py`) that can evaluate *separately authorized* aggregate inputs; those inputs are **not included** in the public repository.
-
-**No observed Al-Karak site-level data, sample identifiers, coordinates, chemistry or magnetic measurements, original spreadsheets, investigator emails, or unapproved derived aggregate tables are published here.**
-
-## Run the public tests
-
-Python 3.10+ is required.
+Python 3.10 or later:
 
 ```bash
 python -m pip install -r requirements.txt
 python run_checks.py
+python code/verify_source_free.py --root derived
+python code/replay_reported_aggregates.py --root derived
 ```
 
-The public checks confirm **904 synthetic exact-arithmetic comparisons**, **11 expected invalid-input rejections**, and both seven-record example cases. The GitHub Actions workflow runs the same commands on new commits. These checks establish only internal software behavior—not the correctness of the historical measurements or an independent regeneration of the cohort-specific paper results.
+The `derived/` directory now contains five *frozen aggregate-only* CSVs from the historical-cohort reanalysis, released with project-team permission. From these, an external reviewer can independently verify **2,537 internal arithmetic/aggregate consistency checks** and the explicitly reported zinc target-size/budget comparisons. Synthetic-code tests add **904 exhaustive small-problem comparisons** and **11 invalid input rejections**. The tests are automatically run in GitHub Actions.
 
-The seven-record example illustrates that a uniform budget window and one fixed budget can favor different ranking workflows. It is *not* an Al-Karak observation.
+For an exact list of outputs checked, commands, and limitations, see **[Reviewer reproduction instructions](docs/REVIEWER_REPRODUCTION.md)** and [Data disclosure](SOURCE_DISCLOSURE.md).
 
-## Public scope versus restricted cohort
+## Public files
 
-The original Al-Karak campaign has 115 magnetic sample records and a restricted 114-site matched primary-chemistry subset. Site-level data and some aggregate-derived verification records remain held by the original custodians. A reader may request access through the corresponding author, **Marianne Tarun (mtarun@hct.ac.ae)**, subject to the original data custodians' permission. Access is not guaranteed, and the public files cannot independently regenerate all cohort-specific numbers in the paper.
+- `code/exact_budget_audit.py` — generic exact tie-aware, finite-cohort budget comparisons.
+- `code/test_exact_budget_audit.py` — independent small synthetic tests.
+- `code/verify_source_free.py` — exact checks of the released aggregate tables, including random-reference identities.
+- `code/replay_reported_aggregates.py` — replay and verify selected headline comparisons from released aggregates.
+- `derived/*.csv` — five **aggregate-only** historical outputs, with no individual site records.
+- `examples/` — explicitly fictional seven-record example and expected outputs.
+- `.github/workflows/verify.yml` — automatic public test execution.
 
-To verify privately admitted aggregate tables, an authorized researcher can provide the correct inputs to:
+## Important limitation
 
-```bash
-python code/verify_source_free.py --root /path/to/approved/derived
-```
+**Neither the 114 matched Al-Karak site-level records nor original lab/field readings or locations are public.** Aggregate replay is meaningfully more informative than synthetic-code testing alone, but is not complete source-to-publication reproduction. To reproduce the historical data acquisition, matching and measurements, a reviewer would need separately authorized access to original custodial records. Please contact corresponding author **Marianne Tarun (mtarun@hct.ac.ae)** for a request, subject to source-custodian approval.
 
-The repository deliberately does not include a `derived/` directory. It also does not claim to certify raw chemical unit conversions, sample-specific detection limits, absolute regulatory concentrations, prospective sensor performance, or instrument superiority.
+This public release does **not** authenticate the 1250 spreadsheet processing factor, original soil mg/kg conversions, site-specific detection limits, or prospective instrument superiority. See `SOURCE_DISCLOSURE.md` for scope.
 
-## Citation and license
+## Citation and software permissions
 
-Please cite the associated journal article if published. This repository currently has **no minted DOI**. The original research data are not licensed for redistribution. No general software reuse license is asserted without author approval.
+Please cite the journal article if published. The repository has **no minted DOI**. The public tables are provided for scholarly verification; no public redistribution right in raw data is granted. Any further software licence should be explicitly approved by the project team.

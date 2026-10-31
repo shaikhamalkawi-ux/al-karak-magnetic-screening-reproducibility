@@ -1,4 +1,4 @@
-name: Source-free verification
+name: Source-free and released-aggregate verification
 on:
   push:
     branches: [main]
@@ -16,3 +16,6 @@ jobs:
           python-version: '3.11'
       - run: python -m pip install -r requirements.txt
       - run: python run_checks.py
+      - run: python code/verify_source_free.py --root derived
+      - run: python code/replay_reported_aggregates.py --root derived
+      - run: sha256sum -c derived/SHA256SUMS.txt

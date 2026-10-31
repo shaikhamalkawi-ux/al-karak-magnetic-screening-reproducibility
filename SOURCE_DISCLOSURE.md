@@ -1,7 +1,11 @@
-# Data and publication boundary
+# Public data and verification boundary
 
-**Historical source measurements are restricted.** This repository makes only generic methods software, synthetic examples, and their verification tests public. Neither the 114 Al-Karak matched site records nor empirical derived aggregate tables have been placed here. The absence of raw data limits independent reproduction of the numerical results reported for the historical cohort.
+The original Al-Karak soil chemistry and magnetic records remain **restricted**. This repository does **not** distribute sample identifiers, original source worksheets, site-specific values, coordinates, field notes, or investigator communications.
 
-The separate source-free derived aggregates have been held back pending appropriate original-data-custodian authorization. This repository does not imply that a public data redistribution license exists.
+With project-team permission for this aggregate-only release, the repository now includes five **frozen, source-free, derived aggregate tables** in `derived/`, generic exact budget/tie handling code, synthetic examples, and reviewer verification scripts. The aggregate CSVs were not recalculated or revised for this release: their bytes match the scientific working package of 29 October 2026.
 
-The historical study used acid-extractable, author-reported measurements; methods-code tests do not authenticate laboratory calibration, method-specific detection limits, or the original instrument conversion factor. Any requests for a restricted, authorized audit should be directed to the corresponding author, and approval remains with the original data custodians.
+A reviewer can check **2,537 exact aggregate arithmetic and internal consistency conditions** with `python code/verify_source_free.py --root derived`, plus the headline comparisons using `python code/replay_reported_aggregates.py`. Public tests also include **904 synthetic arithmetic checks**. These are not independent reproduction of historical raw-data extraction, laboratory calibration or sample-specific limits of detection.
+
+The public material provides numerical transparency at the **aggregate-results level**. Re-running the complete retrospective study from the original site-level cohort still requires custodian-approved data access. The limited release of these summary aggregates is not a general raw-data licence. Contact the corresponding author Marianne Tarun (mtarun@hct.ac.ae) for access requests, subject to custodial approval.
+
+See `docs/REVIEWER_REPRODUCTION.md` for commands, specific claims, file scope and audit limitations.

@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "basis": "Author-approved public aggregate CSVs only; not source-row reproduction",
+  "cohort_size": 114,
+  "number_of_metal_targets": 8,
+  "chemical_top_t_primary": 23,
+  "zinc_t23": {
+    "budget_23": {
+      "field_recovered": [
+        7,
+        7
+      ],
+      "laboratory_recovered": [
+        4,
+        4
+      ]
+    },
+    "budget_46": {
+      "field_recovered": [
+        8,
+        8
+      ],
+      "laboratory_recovered": [
+        11,
+        12
+      ]
+    }
+  },
+  "aggregation_rules": 16,
+  "zinc_prefix_budgets_1_to_46": {
+    "chemical_target_12": {
+      "number_of_aggregation_rules": 16,
+      "classes": {
+        "UNRESOLVED": 16
+      },
+      "minimum_reported_lower": -34,
+      "maximum_reported_upper": 30
+    },
+    "chemical_target_23": {
+      "number_of_aggregation_rules": 16,
+      "classes": {
+        "FIELD": 16
+      },
+      "minimum_reported_lower": -53,
+      "maximum_reported_upper": -5
+    },
+    "chemical_target_35": {
+      "number_of_aggregation_rules": 16,
+      "classes": {
+        "LAB": 16
+      },
+      "minimum_reported_lower": 30,
+      "maximum_reported_upper": 67
+    }
+  },
+  "replay_checks": 2537,
+  "replay_breakdown": {
+    "zinc_bounds_sign": 240,
+    "primary_point_crosscheck": 32,
+    "primary_bounds": 1824,
+    "hypergeom_bounds": 32,
+    "nominal_overlap_identity": 1,
+    "pooled_multimetal_group_dp": 2,
+    "small_bruteforce_dp": 26,
+    "hypergeom_mass_identity": 380
+  },
+  "scopes_not_verified": [
+    "original chemistry",
+    "original magnetic readings",
+    "sample IDs",
+    "site-level rankings or joins",
+    "absolute calibration",
+    "field validation",
+    "raw-data collection"
+  ]
+}

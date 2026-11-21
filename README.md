@@ -1,6 +1,6 @@
 # Al-Karak magnetic screening — reviewer code and aggregate-only replay
 
-This public repository supports the paper **Magnetic Soil-Screening Preferences Depend on Chemical Targets and Assay-Budget Range: A Source-Audited Al-Karak Reanalysis**.
+This public repository supports the paper **Prioritizing Soil Sites When Chemical Testing Is Limited: A Tie-Aware Decision Audit of Field and Laboratory Magnetic Rankings in Al-Karak, Jordan**.
 
 **Public reviewer link:** https://github.com/shaikhamalkawi-ux/al-karak-magnetic-screening-reproducibility
 
@@ -38,3 +38,11 @@ This public release does **not** authenticate the 1250 spreadsheet processing fa
 ## Citation and software permissions
 
 Please cite the journal article if published. The repository has **no minted DOI**. The public tables are provided for scholarly verification; no public redistribution right in raw data is granted. Any further software licence should be explicitly approved by the project team.
+
+## Alignment with the current manuscript (22 November 2026)
+
+The current **EP12 author-review manuscript** is titled **Prioritizing Soil Sites When Chemical Testing Is Limited: A Tie-Aware Decision Audit of Field and Laboratory Magnetic Rankings in Al-Karak, Jordan**. The repository is the public code-and-aggregate release cited in its Data Availability Statement and Supplement. It is not a journal publication or a complete release of the historical site-level data.
+
+The **five frozen CSV files in `derived/` are the only public historical-data outputs here**. They remain byte-for-byte unchanged during this synchronization, as do all analysis and test scripts. The public checks verify internal arithmetic and selected claims from aggregates, not original site measurements or prospective performance. See the [EP12 verification map](docs/EP12_MANUSCRIPT_MAP.md).
+
+A separately named comprehensive certificates archive is **not included** in this public release. It should not be described as an available attachment until an exact authorized copy is archived and verified. The repository has no DOI; the EP12 manuscript is still under author review.

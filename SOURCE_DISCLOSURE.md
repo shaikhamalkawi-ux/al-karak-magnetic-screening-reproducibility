@@ -1,17 +1,11 @@
-# Public data and verification boundary
+# Al-Karak public data boundary
 
-The original Al-Karak soil chemistry and magnetic records remain **restricted**. This repository does **not** distribute sample identifiers, original source worksheets, site-specific values, coordinates, field notes, or investigator communications.
+This repository retains five original frozen aggregate-only result tables and publishes two *new derived aggregate-only EP14R3* tables: a 114-budget all-rule zinc corridor and a 16-rule hypothetical budget-policy certificate. Generic code and synthetic examples are also available. No original 114-site measurements, sample identifiers, coordinates, laboratory export files or worksheets are distributed here.
 
-With project-team permission for this aggregate-only release, the repository now includes five **frozen, source-free, derived aggregate tables** in `derived/`, generic exact budget/tie handling code, synthetic examples, and reviewer verification scripts. The aggregate CSVs were not recalculated or revised for this release: their bytes match the scientific working package of 29 October 2026.
+The original five public aggregate CSVs are unchanged. Their arithmetic and consistency checks are source-free and do not establish calibration or reproduce original site matching. The new EP14R3 certificate results can be rederived using `python code/verify_ep14r3_novelty.py`. Queries regarding original data can be directed to corresponding author Marianne Tarun (mtarun@hct.ac.ae) under the applicable historical-source access conditions.
 
-A reviewer can check **2,537 exact aggregate arithmetic and internal consistency conditions** with `python code/verify_source_free.py --root derived`, plus the headline comparisons using `python code/replay_reported_aggregates.py`. Public tests also include **904 synthetic arithmetic checks**. These are not independent reproduction of historical raw-data extraction, laboratory calibration or sample-specific limits of detection.
+The historical final report abstract says graphite-furnace AAS; detailed report Section 3.2.6 and the 2013 published primary article instead identify PerkinElmer ELAN 9000 ICP-MS. The instrument designation is therefore reported as ICP-MS. This is not a certification of the historic raw instrument units, all dilutions, the spreadsheet factor 1,250, or original assay accuracy.
 
-The public material provides numerical transparency at the **aggregate-results level**. Re-running the complete retrospective study from the original site-level cohort still requires custodian-approved data access. The limited release of these summary aggregates is not a general raw-data licence. Additional site-level source records may be requested through the corresponding author Marianne Tarun (mtarun@hct.ac.ae). Availability is considered on request and remains subject to prior authorization by the source custodians and applicable data-sharing conditions; requests are not automatically approved.
+The full journal article, Supplement PDF, and MDPI LaTeX template are held in the separate journal-submission package and are not publicly posted here. No journal submission, repository DOI or additional general redistribution license is claimed.
 
-See `docs/REVIEWER_REPRODUCTION.md` for commands, specific claims, file scope and audit limitations.
-
-## EP14R2 availability statement and scope
-
-All files **currently approved for public release** are provided in this GitHub repository, including five aggregate-only derived CSVs, generic analysis and verification scripts, and synthetic test examples. Additional original site-level data are **not** included in that public release and may be requested through the corresponding author only subject to custodian approval. These two access categories must not be conflated. See [EP14R2 data access and verification map](docs/EP14R2_DATA_ACCESS_AND_VERIFICATION.md).
-
-No individual historical sample ID, location, laboratory value, raw worksheet, or proprietary calibration record was added in this documentation update. The public aggregates cannot reproduce the upstream raw-data merge and original calibration.
+See [EP14R3 results and method](docs/EP14R3_RESULTS_AND_METHOD.md).

@@ -1,6 +1,6 @@
 # Reviewer replay for the Al-Karak screening paper
 
-**Current manuscript:** EP14R2 (author-review, 23 November 2026), the same scientific results as EP14R1 with a clarified public/on-request Data Availability Statement. The public repository contains five frozen aggregates, synthetic data, and code, **not** the restricted original 114-site measurements. See [current data-access map](EP14R2_DATA_ACCESS_AND_VERIFICATION.md); the older [EP12 map](EP12_MANUSCRIPT_MAP.md) is archival provenance.
+**Current manuscript:** EP14R3 (pre-submission, 23 November 2026). Five original aggregates and two derived EP14R3 certificate files are public; original site measurements are not. See [latest results and method](EP14R3_RESULTS_AND_METHOD.md).
 
 **Repository:** https://github.com/shaikhamalkawi-ux/al-karak-magnetic-screening-reproducibility
 
@@ -15,6 +15,7 @@ python -m pip install -r requirements.txt
 python run_checks.py
 python code/verify_source_free.py --root derived
 python code/replay_reported_aggregates.py --root derived
+python code/verify_ep14r3_novelty.py
 ```
 
 The generic code checks (synthetic inputs) verify exact tie handling, budget preferences, and invalid input rejection. The **aggregate-data** checks independently recompute, from the publicly released frozen tables:
@@ -26,7 +27,7 @@ The generic code checks (synthetic inputs) verify exact tie handling, budget pre
 - For the 16 recorded aggregation variants, the summed lab-minus-field outcome over `k=1..46`: `t=23` is field-favoring (limits −53 to −5), `t=12` is unresolved (−34 to +30) and `t=35` is laboratory-favoring (+30 to +67). These are *ranges across the reported configurations*, not confidence intervals.
 - The pooled eight-metal random-reference distribution using a 9-bin site-overlap **histogram only**, with a group-count dynamic program and exact expectation/quantiles/tails.
 
-A complete aggregate-only replay executes **2,537 deterministic checks**. The synthetic-code tests execute **904 arithmetic comparisons**, reject **11 intentionally malformed inputs**, and use **32 synthetic datasets**. GitHub Actions executes the aggregate replay and the synthetic tests after each change to the repository.
+The original aggregate-only replay executes **2,537 deterministic checks**. The EP14R3 checker additionally verifies 114 budget corridor rows and 16 policy rows. The synthetic-code tests execute **904 arithmetic comparisons**, reject **11 intentionally malformed inputs**, and use **32 synthetic datasets**. GitHub Actions executes the aggregate replay and the synthetic tests after each change to the repository.
 
 ## Source-file inventory
 
@@ -37,6 +38,8 @@ A complete aggregate-only replay executes **2,537 deterministic checks**. The sy
 | `derived/zinc_target_sensitivity_16rules.csv` | Three chemical-target sizes, five decision windows, and 16 aggregation rules |
 | `derived/nominal_overlap_histogram.csv` | Aggregated counts of sites with 0–8 high-metal memberships (no site identities) |
 | `derived/nominal_eight_metal_dependent_random_reference.csv` | Exact pooled eight-metal reference probabilities and quantiles |
+| `derived/Zinc_AllRule_Budget_Envelope.csv` | EP14R3 derived 114-budget preference certificate |
+| `derived/Zinc_Reweighting_16Rules_Certificate.csv` | EP14R3 derived 16-rule reweighting certificate |
 
 `derived/SHA256SUMS.txt` records the archive hashes so the released files can be independently checked with `sha256sum -c derived/SHA256SUMS.txt` (from the repository root). On Windows, one can use `Get-FileHash` and compare to the manifest.
 
@@ -46,4 +49,4 @@ The five tables are outputs of a historical analysis, not the underlying 114-sit
 
 Original restricted records remain with the project data custodians. Requests for controlled source-level review go through the corresponding author, **Marianne Tarun (mtarun@hct.ac.ae)**, subject to the custodians' access decision. No approval of *raw data* redistribution is implied by releasing these aggregates.
 
-No paper, supplementary PDF, or scientific result was modified as part of this reviewer-data release.
+The original five aggregate CSVs remain frozen; the MDPI manuscript and supplement PDFs are maintained in the separate submission package.

@@ -18,5 +18,6 @@ jobs:
       - run: python run_checks.py
       - run: python code/verify_source_free.py --root derived
       - run: python code/replay_reported_aggregates.py --root derived
+      - run: python code/verify_ep14r3_novelty.py
       - run: sha256sum -c derived/SHA256SUMS.txt
       - run: sha256sum -c SHA256SUMS.txt

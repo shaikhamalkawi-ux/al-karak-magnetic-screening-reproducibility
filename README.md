@@ -1,48 +1,31 @@
-# Al-Karak magnetic screening — reviewer code and aggregate-only replay
+# Al-Karak magnetic soil screening — source-free verification
 
-This public repository supports the paper **Prioritizing Soil Sites When Chemical Testing Is Limited: A Tie-Aware Decision Audit of Field and Laboratory Magnetic Rankings in Al-Karak, Jordan**.
+This public repository supports the pre-submission manuscript **Prioritizing Soil Sites When Chemical Testing Is Limited: A Tie-Aware Decision Audit of Field and Laboratory Magnetic Rankings in Al-Karak, Jordan** (research version EP14R3, 23 November 2026).
 
-**Public reviewer link:** https://github.com/shaikhamalkawi-ux/al-karak-magnetic-screening-reproducibility
+## Research outcomes
 
-## Reproduce the publicly checkable results
+Among 114 matched historical sites, using the top-23 *recorded zinc* target, the field MS2D ranking is strictly preferred at every budget k=19–32 and laboratory MS2B at every k=41–100, across 16 field aggregation rules and recorded-value ties. On the same feasible budget support k=27–46, two strictly positive, nonincreasing probability policies yield opposite laboratory-minus-field preferences. A conservative mixture-switching weight lies in [3/43,23/43].
 
-Python 3.10 or later:
+These are post hoc, finite-cohort diagnostic results, not new mathematical theory, prospective performance, or operating-cost evidence. [Read the exact bounds and archival source-method comparison](docs/EP14R3_RESULTS_AND_METHOD.md).
+
+## Run tests
 
 ```bash
 python -m pip install -r requirements.txt
 python run_checks.py
 python code/verify_source_free.py --root derived
 python code/replay_reported_aggregates.py --root derived
+python code/verify_ep14r3_novelty.py
+sha256sum -c derived/SHA256SUMS.txt
+sha256sum -c SHA256SUMS.txt
 ```
 
-The `derived/` directory now contains five *frozen aggregate-only* CSVs from the historical-cohort reanalysis, released with project-team permission. From these, an external reviewer can independently verify **2,537 internal arithmetic/aggregate consistency checks** and the explicitly reported zinc target-size/budget comparisons. Synthetic-code tests add **904 exhaustive small-problem comparisons** and **11 invalid input rejections**. The tests are automatically run in GitHub Actions.
+The original **five frozen aggregate-only CSVs** have not changed. This update adds **two derived aggregate-only EP14R3 certificates** and a verifier; the established public checks cover 2,537 arithmetic/consistency conditions and 904 synthetic checks with 11 invalid-input rejections.
 
-For an exact list of outputs checked, commands, and limitations, see **[Reviewer reproduction instructions](docs/REVIEWER_REPRODUCTION.md)** and [Data disclosure](SOURCE_DISCLOSURE.md).
+No individual site-level readings, sample IDs, coordinates, chemical workbooks or calibration exports are public. Source-level requests go through corresponding author Marianne Tarun (mtarun@hct.ac.ae), subject to the applicable conditions.
 
-## Public files
+The historical final-report abstract mentions AAS; its detailed methods and the 2013 peer-reviewed study instead identify **PerkinElmer ELAN 9000 ICP-MS**. This supports the instrument designation but does not independently certify absolute concentration conversion.
 
-- `code/exact_budget_audit.py` — generic exact tie-aware, finite-cohort budget comparisons.
-- `code/test_exact_budget_audit.py` — independent small synthetic tests.
-- `code/verify_source_free.py` — exact checks of the released aggregate tables, including random-reference identities.
-- `code/replay_reported_aggregates.py` — replay and verify selected headline comparisons from released aggregates.
-- `derived/*.csv` — five **aggregate-only** historical outputs, with no individual site records.
-- `examples/` — explicitly fictional seven-record example and expected outputs.
-- `.github/workflows/verify.yml` — automatic public test execution.
+The journal-specific MDPI LaTeX template and pre-submission manuscript/supplement PDFs are maintained in the separate submission package, not posted to this repository. The paper is not submitted and no repository DOI or general software licence is asserted.
 
-## Important limitation
-
-**Neither the 114 matched Al-Karak site-level records nor original lab/field readings or locations are public.** Aggregate replay is meaningfully more informative than synthetic-code testing alone, but is not complete source-to-publication reproduction. To reproduce the historical data acquisition, matching and measurements, a reviewer would need separately authorized access to original custodial records. Please contact corresponding author **Marianne Tarun (mtarun@hct.ac.ae)** for a request, subject to source-custodian approval.
-
-This public release does **not** authenticate the 1250 spreadsheet processing factor, original soil mg/kg conversions, site-specific detection limits, or prospective instrument superiority. See `SOURCE_DISCLOSURE.md` for scope.
-
-## Citation and software permissions
-
-Please cite the journal article if published. The repository has **no minted DOI**. The public tables are provided for scholarly verification; no public redistribution right in raw data is granted. Any further software licence should be explicitly approved by the project team.
-
-## Alignment with the current manuscript (23 November 2026)
-
-The current author-review version is **EP14R2** (Geosciences/MDPI), titled **Prioritizing Soil Sites When Chemical Testing Is Limited: A Tie-Aware Decision Audit of Field and Laboratory Magnetic Rankings in Al-Karak, Jordan**. It is **not submitted** to a journal. The latest edit clarifies the Data Availability Statement only; all empirical results, figures, equations, and public aggregate CSVs remain unchanged.
-
-**All materials already approved for public release are available directly in this repository:** generic analysis and verification code, explicitly synthetic examples, and the five aggregate-level CSV tables in `derived/`. The original 114-site magnetic and chemical records, identifiers, coordinates, and laboratory workbooks are not public. Additional site-level records **may be requested** through corresponding author Marianne Tarun (mtarun@hct.ac.ae); access remains subject to historical data-custodian approval and applicable data-sharing terms. Such requests are not guaranteed to be approved.
-
-See [EP14R2 data access and verification map](docs/EP14R2_DATA_ACCESS_AND_VERIFICATION.md) and [Reviewer reproduction](docs/REVIEWER_REPRODUCTION.md). The older [EP12 map](docs/EP12_MANUSCRIPT_MAP.md) remains as archival provenance. No repository DOI or raw-data license has been minted or assumed.
+[Source and rights boundary](SOURCE_DISCLOSURE.md) · [EP14R3 evidence](docs/EP14R3_RESULTS_AND_METHOD.md) · [Reviewer reproduction](docs/REVIEWER_REPRODUCTION.md)

@@ -1,12 +1,12 @@
 # Reviewer replay for the Al-Karak screening paper
 
-**Current manuscript:** EP14R3 (pre-submission, 23 November 2026). Five original aggregates and two derived EP14R3 certificate files are public; original site measurements are not. See [latest results and method](EP14R3_RESULTS_AND_METHOD.md).
+**Current manuscript:** EP14R3, public site-data release 23 November 2026. Full numerical site-level field, laboratory and chemistry values are openly available in data/AlKarak_2009_Matched_SiteMeasurements_115.csv (115 rows, of which 114 are chemistry-complete). See [source replay certificate](SITE_LEVEL_REPLAY_CERTIFICATE.md).
 
 **Repository:** https://github.com/shaikhamalkawi-ux/al-karak-magnetic-screening-reproducibility
 
-This release contains five **aggregate-only derived tables** preserved byte-for-byte from the frozen research outputs of 29 October 2026. They contain *no site identifiers, coordinates, original chemistry or magnetic readings, sampling maps, or sample-level rows*.
+The five previously published aggregate-only tables are preserved byte-for-byte. In addition the full historical **site-level numerical values for analysis** (including original sample IDs, four field readings, laboratory magnetism and recorded chemistry) are now openly released in data/. A second verifier rebuilds the aggregate tables directly from those site measurements. Detailed GPS/landmark remarks are excluded from public release for residential privacy.
 
-## What you can check with no permission or original data
+## Public source-level numerical replay
 
 On Python 3.10 or later:
 
@@ -15,6 +15,7 @@ python -m pip install -r requirements.txt
 python run_checks.py
 python code/verify_source_free.py --root derived
 python code/replay_reported_aggregates.py --root derived
+python code/reproduce_from_site_measurements.py
 python code/verify_ep14r3_novelty.py
 ```
 
@@ -27,7 +28,7 @@ The generic code checks (synthetic inputs) verify exact tie handling, budget pre
 - For the 16 recorded aggregation variants, the summed lab-minus-field outcome over `k=1..46`: `t=23` is field-favoring (limits −53 to −5), `t=12` is unresolved (−34 to +30) and `t=35` is laboratory-favoring (+30 to +67). These are *ranges across the reported configurations*, not confidence intervals.
 - The pooled eight-metal random-reference distribution using a 9-bin site-overlap **histogram only**, with a group-count dynamic program and exact expectation/quantiles/tails.
 
-The original aggregate-only replay executes **2,537 deterministic checks**. The EP14R3 checker additionally verifies 114 budget corridor rows and 16 policy rows. The synthetic-code tests execute **904 arithmetic comparisons**, reject **11 intentionally malformed inputs**, and use **32 synthetic datasets**. GitHub Actions executes the aggregate replay and the synthetic tests after each change to the repository.
+The original aggregate-only replay executes **2,537 deterministic checks**, the EP14R3 checker verifies 114 budget corridor rows and 16 policy rows, and the new direct site-level replay reconstructs all seven published result files byte-for-byte. The synthetic-code tests execute **904 arithmetic comparisons**, reject **11 intentionally malformed inputs**, and use **32 synthetic datasets**. GitHub Actions executes the aggregate replay and the synthetic tests after each change to the repository.
 
 ## Source-file inventory
 
@@ -43,10 +44,13 @@ The original aggregate-only replay executes **2,537 deterministic checks**. The 
 
 `derived/SHA256SUMS.txt` records the archive hashes so the released files can be independently checked with `sha256sum -c derived/SHA256SUMS.txt` (from the repository root). On Windows, one can use `Get-FileHash` and compare to the manifest.
 
-## What this does **not** reproduce
+## Limits of the site-level numerical replay
 
-The five tables are outputs of a historical analysis, not the underlying 114-site raw records. Public replay checks table-to-table consistency, exact arithmetic, and specific reported numerical comparisons, but **cannot independently regenerate the site-level data joins, chemical/magnetic source readings, calibration factors, original sampling timestamps, or the complete upstream analysis from raw measurements**. It must not be cited as an independent laboratory replication or prospective screening validation.
-
-Original restricted records remain with the project data custodians. Requests for controlled source-level review go through the corresponding author, **Marianne Tarun (mtarun@hct.ac.ae)**, subject to the custodians' access decision. No approval of *raw data* redistribution is implied by releasing these aggregates.
+Public numerical site records now permit exact reconstruction of all seven summary tables. The code still cannot independently certify the original ICP-MS calibration, verify each historical sample's below-detection threshold or establish population-level and prospective screening accuracy. GPS/landmark notes are omitted to avoid revealing residential locations. The previously reported aggregate arithmetic and synthetic tests remain available.
 
 The original five aggregate CSVs remain frozen; the MDPI manuscript and supplement PDFs are maintained in the separate submission package.
+
+
+## Full numerical input
+
+The direct input used by the new `python code/reproduce_from_site_measurements.py` script is `data/AlKarak_2009_Matched_SiteMeasurements_115.csv` (115 rows; 114 analysed). The original, aggregate-only CSV files remain in `derived/`. This site-level release is the relevant starting point for an independent calculation audit. See `data/DATA_DICTIONARY.md` for the instrument support and historical presentation/source discrepancy.

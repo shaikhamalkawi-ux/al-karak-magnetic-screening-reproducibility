@@ -1,11 +1,11 @@
-# Al-Karak public data boundary
+# Public availability of the Al-Karak numerical source dataset
 
-This repository retains five original frozen aggregate-only result tables and publishes two *new derived aggregate-only EP14R3* tables: a 114-budget all-rule zinc corridor and a 16-rule hypothetical budget-policy certificate. Generic code and synthetic examples are also available. No original 114-site measurements, sample identifiers, coordinates, laboratory export files or worksheets are distributed here.
+The complete numerical measurements used for the EP14R3 within-cohort ranking analysis are **publicly available** at [data/AlKarak_2009_Matched_SiteMeasurements_115.csv](data/AlKarak_2009_Matched_SiteMeasurements_115.csv). The data file contains 115 historical site records; 114 have matched magnetic and chemical values and form the analysed cohort. Each record includes four field MS2D readings, laboratory magnetic measurements with mass normalizations, original numbered sample IDs, recorded chemistry values (including the eight primary and additional studied elements), and an inclusion flag.
 
-The original five public aggregate CSVs are unchanged. Their arithmetic and consistency checks are source-free and do not establish calibration or reproduce original site matching. The new EP14R3 certificate results can be rederived using `python code/verify_ep14r3_novelty.py`. Queries regarding original data can be directed to corresponding author Marianne Tarun (mtarun@hct.ac.ae) under the applicable historical-source access conditions.
+The independent Python [source-replay program](code/reproduce_from_site_measurements.py) reconstructs all five original frozen aggregate CSVs plus the two additional EP14R3 aggregate certificates **byte-for-byte** from the site measurements. Original aggregate tables and their hashes have not been altered. The public GitHub release includes a data dictionary, code, examples, source-check documentation and QA.
 
-The historical final report abstract says graphite-furnace AAS; detailed report Section 3.2.6 and the 2013 published primary article instead identify PerkinElmer ELAN 9000 ICP-MS. The instrument designation is therefore reported as ICP-MS. This is not a certification of the historic raw instrument units, all dilutions, the spreadsheet factor 1,250, or original assay accuracy.
+Historical location field notes include references to identifiable residences; precise GPS and free-text location descriptions are not copied into the public numerical file. These are not inputs to the manuscript's retrieval calculations.
 
-The full journal article, Supplement PDF, and MDPI LaTeX template are held in the separate journal-submission package and are not publicly posted here. No journal submission, repository DOI or additional general redistribution license is claimed.
+This public release enables direct numerical reproduction without requesting data from the corresponding author. It is not independent authentication of original analytical instrument exports, laboratory detection limits, the historic concentration-unit conversion or a new field validation. The final project's detailed chemistry methods and the 2013 published article report PerkinElmer ELAN 9000 ICP-MS; an earlier report abstract mentions AAS.
 
-See [EP14R3 results and method](docs/EP14R3_RESULTS_AND_METHOD.md).
+The full MDPI manuscript and supplementary PDF, including the journal LaTeX template, are held in the separate editorial submission package and are not published in this repository.

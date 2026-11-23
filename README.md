@@ -1,31 +1,41 @@
-# Al-Karak magnetic soil screening — source-free verification
+# Al-Karak soil magnetic screening — open numerical data and reproduction
 
-This public repository supports the pre-submission manuscript **Prioritizing Soil Sites When Chemical Testing Is Limited: A Tie-Aware Decision Audit of Field and Laboratory Magnetic Rankings in Al-Karak, Jordan** (research version EP14R3, 23 November 2026).
+This repository supports the pre-submission article *Prioritizing Soil Sites When Chemical Testing Is Limited: A Tie-Aware Decision Audit of Field and Laboratory Magnetic Rankings in Al-Karak, Jordan* (research EP14R3; public-data release 23 November 2026).
 
-## Research outcomes
+## Fully public numerical site data
 
-Among 114 matched historical sites, using the top-23 *recorded zinc* target, the field MS2D ranking is strictly preferred at every budget k=19–32 and laboratory MS2B at every k=41–100, across 16 field aggregation rules and recorded-value ties. On the same feasible budget support k=27–46, two strictly positive, nonincreasing probability policies yield opposite laboratory-minus-field preferences. A conservative mixture-switching weight lies in [3/43,23/43].
+- [115 historical field/laboratory site records, including the 114 chemical-complete sites](data/AlKarak_2009_Matched_SiteMeasurements_115.csv): four original field readings per site; laboratory magnetic LF/HF readings and mass for AC, AF, BC and BF fractions; recorded chemical elements and original sample identifiers; and an inclusion flag.
+- [Column dictionary and interpretation](data/DATA_DICTIONARY.md).
+- [Data reuse terms](data/DATA_LICENSE.md).
+- [Full source-level replay code](code/reproduce_from_site_measurements.py), which reconstructs **all seven published numerical aggregate files byte-for-byte** from the public site-level values, including zinc target/budget comparisons, metal random references, dependent multi-metal random distributions and both EP14R3 novelty certificates.
+- The earlier `derived/` files and generic synthetic-code tests are retained.
 
-These are post hoc, finite-cohort diagnostic results, not new mathematical theory, prospective performance, or operating-cost evidence. [Read the exact bounds and archival source-method comparison](docs/EP14R3_RESULTS_AND_METHOD.md).
+The numerical measurements supporting the research are available for direct download without login or data request. No individual site-level quantitative record used for the ranking analysis is withheld. Historical free-text location descriptions and precise GPS entries are omitted to avoid identifying residences; neither is needed to reproduce the numerical results.
 
-## Run tests
+## Reproduce results from site measurements
+
+Python 3.10 or newer:
 
 ```bash
-python -m pip install -r requirements.txt
+python code/reproduce_from_site_measurements.py
 python run_checks.py
 python code/verify_source_free.py --root derived
 python code/replay_reported_aggregates.py --root derived
 python code/verify_ep14r3_novelty.py
-sha256sum -c derived/SHA256SUMS.txt
 sha256sum -c SHA256SUMS.txt
+sha256sum -c derived/SHA256SUMS.txt
 ```
 
-The original **five frozen aggregate-only CSVs** have not changed. This update adds **two derived aggregate-only EP14R3 certificates** and a verifier; the established public checks cover 2,537 arithmetic/consistency conditions and 904 synthetic checks with 11 invalid-input rejections.
+**Verification evidence:** 115 location records, 114 admitted chemical-complete records, 56 columns in the public numerical data file, 7/7 full aggregate file matches by SHA-256/byte identity, and GitHub Actions checks. The result is a reproduction from historical *site-level numerical observations*, not an independent repeat of field sampling, verification of the original chemical calibration, or a claim of prospective screening performance.
 
-No individual site-level readings, sample IDs, coordinates, chemical workbooks or calibration exports are public. Source-level requests go through corresponding author Marianne Tarun (mtarun@hct.ac.ae), subject to the applicable conditions.
+## Main decision findings
 
-The historical final-report abstract mentions AAS; its detailed methods and the 2013 peer-reviewed study instead identify **PerkinElmer ELAN 9000 ICP-MS**. This supports the instrument designation but does not independently certify absolute concentration conversion.
+For the top-23 recorded zinc target: field MS2D ranking has a strict all-rule preference at each k=19–32; laboratory MS2B has a strict preference at k=41–100. For identical budget support k=27–46, two positive nonincreasing budget-probability policies reverse the preferred ranking. The conservative transition-weight envelope is [3/43,23/43]. These are conditional post hoc comparisons, not a new general theorem or an assertion of instrument superiority.
 
-The journal-specific MDPI LaTeX template and pre-submission manuscript/supplement PDFs are maintained in the separate submission package, not posted to this repository. The paper is not submitted and no repository DOI or general software licence is asserted.
+## Historical measurement method
 
-[Source and rights boundary](SOURCE_DISCLOSURE.md) · [EP14R3 evidence](docs/EP14R3_RESULTS_AND_METHOD.md) · [Reviewer reproduction](docs/REVIEWER_REPRODUCTION.md)
+The original project report abstract says AAS; its Section 3.2.6 and the peer-reviewed article of El-Hasan and Lataifeh (2013), DOI 10.1007/s12665-012-2058-4, document **PerkinElmer ELAN 9000 ICP-MS**. The current methods follow the detailed report and publication. The original instrument export unit, complete dilution history and historical ×1250 processing factor are not independently metrologically certified.
+
+**The journal-template article and supplementary PDFs are not posted to GitHub.** The research article has not been submitted or accepted.
+
+[Source replay audit](docs/SITE_LEVEL_REPLAY_CERTIFICATE.md) · [Data availability](SOURCE_DISCLOSURE.md) · [EP14R3 analysis](docs/EP14R3_RESULTS_AND_METHOD.md) · [Reviewer instructions](docs/REVIEWER_REPRODUCTION.md)

@@ -39,10 +39,10 @@ This public release does **not** authenticate the 1250 spreadsheet processing fa
 
 Please cite the journal article if published. The repository has **no minted DOI**. The public tables are provided for scholarly verification; no public redistribution right in raw data is granted. Any further software licence should be explicitly approved by the project team.
 
-## Alignment with the current manuscript (22 November 2026)
+## Alignment with the current manuscript (23 November 2026)
 
-The current **EP12 author-review manuscript** is titled **Prioritizing Soil Sites When Chemical Testing Is Limited: A Tie-Aware Decision Audit of Field and Laboratory Magnetic Rankings in Al-Karak, Jordan**. The repository is the public code-and-aggregate release cited in its Data Availability Statement and Supplement. It is not a journal publication or a complete release of the historical site-level data.
+The current author-review version is **EP14R2** (Geosciences/MDPI), titled **Prioritizing Soil Sites When Chemical Testing Is Limited: A Tie-Aware Decision Audit of Field and Laboratory Magnetic Rankings in Al-Karak, Jordan**. It is **not submitted** to a journal. The latest edit clarifies the Data Availability Statement only; all empirical results, figures, equations, and public aggregate CSVs remain unchanged.
 
-The **five frozen CSV files in `derived/` are the only public historical-data outputs here**. They remain byte-for-byte unchanged during this synchronization, as do all analysis and test scripts. The public checks verify internal arithmetic and selected claims from aggregates, not original site measurements or prospective performance. See the [EP12 verification map](docs/EP12_MANUSCRIPT_MAP.md).
+**All materials already approved for public release are available directly in this repository:** generic analysis and verification code, explicitly synthetic examples, and the five aggregate-level CSV tables in `derived/`. The original 114-site magnetic and chemical records, identifiers, coordinates, and laboratory workbooks are not public. Additional site-level records **may be requested** through corresponding author Marianne Tarun (mtarun@hct.ac.ae); access remains subject to historical data-custodian approval and applicable data-sharing terms. Such requests are not guaranteed to be approved.
 
-A separately named comprehensive certificates archive is **not included** in this public release. It should not be described as an available attachment until an exact authorized copy is archived and verified. The repository has no DOI; the EP12 manuscript is still under author review.
+See [EP14R2 data access and verification map](docs/EP14R2_DATA_ACCESS_AND_VERIFICATION.md) and [Reviewer reproduction](docs/REVIEWER_REPRODUCTION.md). The older [EP12 map](docs/EP12_MANUSCRIPT_MAP.md) remains as archival provenance. No repository DOI or raw-data license has been minted or assumed.

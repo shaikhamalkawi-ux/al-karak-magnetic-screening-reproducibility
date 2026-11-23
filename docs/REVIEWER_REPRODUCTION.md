@@ -1,6 +1,6 @@
-# Reviewer replay for the Al-Karak retrospective screening paper
+# Reviewer replay for the Al-Karak screening paper
 
-**Manuscript currently aligned:** Prioritizing Soil Sites When Chemical Testing Is Limited: A Tie-Aware Decision Audit of Field and Laboratory Magnetic Rankings in Al-Karak, Jordan (EP12 author-review, 22 November 2026). The release is limited to the five frozen aggregates and the public verification code; see [EP12 mapping](EP12_MANUSCRIPT_MAP.md). The separately named extended certificate ZIP is not included in this repository.
+**Current manuscript:** EP14R2 (author-review, 23 November 2026), the same scientific results as EP14R1 with a clarified public/on-request Data Availability Statement. The public repository contains five frozen aggregates, synthetic data, and code, **not** the restricted original 114-site measurements. See [current data-access map](EP14R2_DATA_ACCESS_AND_VERIFICATION.md); the older [EP12 map](EP12_MANUSCRIPT_MAP.md) is archival provenance.
 
 **Repository:** https://github.com/shaikhamalkawi-ux/al-karak-magnetic-screening-reproducibility
 

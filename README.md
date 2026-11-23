@@ -1,6 +1,9 @@
 # Al-Karak soil magnetic screening — open numerical data and reproduction
 
-This repository supports the pre-submission article *Prioritizing Soil Sites When Chemical Testing Is Limited: A Tie-Aware Decision Audit of Field and Laboratory Magnetic Rankings in Al-Karak, Jordan* (research EP14R3; public-data release 23 November 2026).
+This repository supports the pre-submission article *Prioritizing Soil Sites When Chemical Testing Is Limited: A Tie-Aware Decision Audit of Field and Laboratory Magnetic Rankings in Al-Karak, Jordan* (journal submission version EP14R4; methods/decision-results baseline EP14R3; public site-level data release 23 November 2026).
+
+
+**Immutable analysis-data snapshot:** [commit `a3d2a2f9ffa04da3f951211d9f59e046b3424eba`](https://github.com/shaikhamalkawi-ux/al-karak-magnetic-screening-reproducibility/tree/a3d2a2f9ffa04da3f951211d9f59e046b3424eba). EP14R4 adds the public site-level numerical replay and revised data-availability description; it does not change the EP14R3 mathematical results. This Git commit is a fixed reproducibility reference, not a Zenodo DOI.
 
 ## Fully public numerical site data
 

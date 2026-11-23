@@ -1,6 +1,6 @@
 # Reviewer replay for the Al-Karak screening paper
 
-**Current manuscript:** EP14R3, public site-data release 23 November 2026. Full numerical site-level field, laboratory and chemistry values are openly available in data/AlKarak_2009_Matched_SiteMeasurements_115.csv (115 rows, of which 114 are chemistry-complete). See [source replay certificate](SITE_LEVEL_REPLAY_CERTIFICATE.md).
+**Current manuscript:** EP14R4 (submission candidate, 24 November 2026), retaining the EP14R3 decision calculations with an openly released site-level numerical dataset. Full numerical site-level field, laboratory and chemistry values are openly available in data/AlKarak_2009_Matched_SiteMeasurements_115.csv (115 rows, of which 114 are chemistry-complete). For fixed data and code, use [commit a3d2a2f9](https://github.com/shaikhamalkawi-ux/al-karak-magnetic-screening-reproducibility/tree/a3d2a2f9ffa04da3f951211d9f59e046b3424eba). See [source replay certificate](SITE_LEVEL_REPLAY_CERTIFICATE.md).
 
 **Repository:** https://github.com/shaikhamalkawi-ux/al-karak-magnetic-screening-reproducibility
 

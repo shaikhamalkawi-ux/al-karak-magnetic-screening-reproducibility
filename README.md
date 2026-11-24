@@ -1,9 +1,9 @@
 # Al-Karak soil magnetic screening — open numerical data and reproduction
 
-This repository supports the pre-submission article *Prioritizing Soil Sites When Chemical Testing Is Limited: A Tie-Aware Decision Audit of Field and Laboratory Magnetic Rankings in Al-Karak, Jordan* (journal submission version EP14R4; methods/decision-results baseline EP14R3; public site-level data release 23 November 2026).
+This repository supports the pre-submission article *Prioritizing Soil Sites When Chemical Testing Is Limited: A Tie-Aware Decision Audit of Field and Laboratory Magnetic Rankings in Al-Karak, Jordan* (current author-review version EP14R6; original paired-budget decision-results baseline EP14R3, source-level public data release EP14R4, and high-first feasibility analysis EP14R5; 25 November 2026).
 
 
-**Immutable analysis-data snapshot:** [commit `a3d2a2f9ffa04da3f951211d9f59e046b3424eba`](https://github.com/shaikhamalkawi-ux/al-karak-magnetic-screening-reproducibility/tree/a3d2a2f9ffa04da3f951211d9f59e046b3424eba). EP14R4 adds the public site-level numerical replay and revised data-availability description; it does not change the EP14R3 mathematical results. This Git commit is a fixed reproducibility reference, not a Zenodo DOI.
+**Immutable analysis-data snapshot:** [commit `a3d2a2f9ffa04da3f951211d9f59e046b3424eba`](https://github.com/shaikhamalkawi-ux/al-karak-magnetic-screening-reproducibility/tree/a3d2a2f9ffa04da3f951211d9f59e046b3424eba). The pinned source-data commit contains the open numerical observations; it predates the subsequently added high-first policy-class code in EP14R6. The EP14R3 paired-budget results and seven source-replayed tables have not changed. This Git commit is a fixed reproducibility reference, not a Zenodo DOI.
 
 ## Fully public numerical site data
 
@@ -25,6 +25,8 @@ python run_checks.py
 python code/verify_source_free.py --root derived
 python code/replay_reported_aggregates.py --root derived
 python code/verify_ep14r3_novelty.py
+python code/verify_stratified_no_go.py
+python code/verify_sorted_readings_no_go.py
 sha256sum -c SHA256SUMS.txt
 sha256sum -c derived/SHA256SUMS.txt
 ```
@@ -42,3 +44,11 @@ The original project report abstract says AAS; its Section 3.2.6 and the peer-re
 **The journal-template article and supplementary PDFs are not posted to GitHub.** The research article has not been submitted or accepted.
 
 [Source replay audit](docs/SITE_LEVEL_REPLAY_CERTIFICATE.md) · [Data availability](SOURCE_DISCLOSURE.md) · [EP14R3 analysis](docs/EP14R3_RESULTS_AND_METHOD.md) · [Reviewer instructions](docs/REVIEWER_REPRODUCTION.md)
+
+## EP14R6: High-first feasibility certificate (new relative to original paired-budget audit)
+
+The fully public Python-standard-library verifier `code/verify_stratified_no_go.py` checks **5,209 strict four-reading ordered dominance pairs**, **90 admissible 23-site sets**, and a maximum **−55/14** eight-metal target incidence excess versus each selected set's source-activity-composition-matched random expected count. The six-/four-group strict negative corridor covers budgets **18–36** and ends at budget 37. A **separate** test `code/verify_sorted_readings_no_go.py` first sorts the four field readings within each site to avoid arbitrary replicate-label alignment, and certifies **5,778** strict order-statistic pairs, **11** admissible 23-site sets, and a maximum **−6**. This sorted test imposes more precedence constraints and thus examines a **smaller, stricter** high-first class; it is not a claim about all magnetic-screening algorithms. These tests are historical and post hoc, not independent field validation or an economic comparison.
+
+The 2011 project final report identifies the **Scientific Research Support Fund (SRSF), grant S/2/02/2008**, and dates sampling **July–September 2009**; the 2013 published original study dates the same field campaign **June–August 2009**. The exact month window is unresolved in the documents, so the author-review manuscript calls it the 2009 campaign and discloses both. HCT APC support does not alter original historical grant attribution.
+
+[Reproducible R6 certificate, exact numbers and boundaries](docs/EP14R6_POLICY_AND_PROVENANCE.md) · [Original source-data SHA snapshot](https://github.com/shaikhamalkawi-ux/al-karak-magnetic-screening-reproducibility/tree/a3d2a2f9ffa04da3f951211d9f59e046b3424eba).

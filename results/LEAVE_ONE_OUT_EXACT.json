@@ -1,0 +1,686 @@
+[
+  {
+    "excluded_sample_id": 8,
+    "best_excess_fraction": "-2831/546",
+    "negative": true,
+    "number_of_ideals": 79
+  },
+  {
+    "excluded_sample_id": 9,
+    "best_excess_fraction": "-32/7",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 10,
+    "best_excess_fraction": "-1142/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 11,
+    "best_excess_fraction": "-55/14",
+    "negative": true,
+    "number_of_ideals": 58
+  },
+  {
+    "excluded_sample_id": 18,
+    "best_excess_fraction": "-55/14",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 19,
+    "best_excess_fraction": "-1997/546",
+    "negative": true,
+    "number_of_ideals": 95
+  },
+  {
+    "excluded_sample_id": 20,
+    "best_excess_fraction": "-43/10",
+    "negative": true,
+    "number_of_ideals": 68
+  },
+  {
+    "excluded_sample_id": 21,
+    "best_excess_fraction": "-167/35",
+    "negative": true,
+    "number_of_ideals": 95
+  },
+  {
+    "excluded_sample_id": 22,
+    "best_excess_fraction": "-55/14",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 23,
+    "best_excess_fraction": "-55/14",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 30,
+    "best_excess_fraction": "-4",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 31,
+    "best_excess_fraction": "-43/10",
+    "negative": true,
+    "number_of_ideals": 83
+  },
+  {
+    "excluded_sample_id": 32,
+    "best_excess_fraction": "-1163/287",
+    "negative": true,
+    "number_of_ideals": 57
+  },
+  {
+    "excluded_sample_id": 33,
+    "best_excess_fraction": "-43/10",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 34,
+    "best_excess_fraction": "-1163/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 35,
+    "best_excess_fraction": "-4",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 42,
+    "best_excess_fraction": "-55/14",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 43,
+    "best_excess_fraction": "-167/35",
+    "negative": true,
+    "number_of_ideals": 89
+  },
+  {
+    "excluded_sample_id": 44,
+    "best_excess_fraction": "-167/35",
+    "negative": true,
+    "number_of_ideals": 95
+  },
+  {
+    "excluded_sample_id": 45,
+    "best_excess_fraction": "-43/10",
+    "negative": true,
+    "number_of_ideals": 53
+  },
+  {
+    "excluded_sample_id": 46,
+    "best_excess_fraction": "-2531/861",
+    "negative": true,
+    "number_of_ideals": 95
+  },
+  {
+    "excluded_sample_id": 47,
+    "best_excess_fraction": "-55/14",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 55,
+    "best_excess_fraction": "-43/10",
+    "negative": true,
+    "number_of_ideals": 95
+  },
+  {
+    "excluded_sample_id": 56,
+    "best_excess_fraction": "-40/7",
+    "negative": true,
+    "number_of_ideals": 94
+  },
+  {
+    "excluded_sample_id": 57,
+    "best_excess_fraction": "-2531/861",
+    "negative": true,
+    "number_of_ideals": 95
+  },
+  {
+    "excluded_sample_id": 58,
+    "best_excess_fraction": "-4253/861",
+    "negative": true,
+    "number_of_ideals": 82
+  },
+  {
+    "excluded_sample_id": 59,
+    "best_excess_fraction": "-55/14",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 63,
+    "best_excess_fraction": "-4",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 64,
+    "best_excess_fraction": "-173/42",
+    "negative": true,
+    "number_of_ideals": 95
+  },
+  {
+    "excluded_sample_id": 65,
+    "best_excess_fraction": "-1142/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 68,
+    "best_excess_fraction": "-1163/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 69,
+    "best_excess_fraction": "-2831/546",
+    "negative": true,
+    "number_of_ideals": 94
+  },
+  {
+    "excluded_sample_id": 70,
+    "best_excess_fraction": "-1163/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 71,
+    "best_excess_fraction": "-1163/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 73,
+    "best_excess_fraction": "-55/14",
+    "negative": true,
+    "number_of_ideals": 76
+  },
+  {
+    "excluded_sample_id": 74,
+    "best_excess_fraction": "-317/91",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 75,
+    "best_excess_fraction": "-43/10",
+    "negative": true,
+    "number_of_ideals": 95
+  },
+  {
+    "excluded_sample_id": 76,
+    "best_excess_fraction": "-43/10",
+    "negative": true,
+    "number_of_ideals": 92
+  },
+  {
+    "excluded_sample_id": 77,
+    "best_excess_fraction": "-1997/546",
+    "negative": true,
+    "number_of_ideals": 95
+  },
+  {
+    "excluded_sample_id": 78,
+    "best_excess_fraction": "-1163/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 79,
+    "best_excess_fraction": "-1163/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 80,
+    "best_excess_fraction": "-317/91",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 81,
+    "best_excess_fraction": "-43/10",
+    "negative": true,
+    "number_of_ideals": 74
+  },
+  {
+    "excluded_sample_id": 82,
+    "best_excess_fraction": "-1163/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 83,
+    "best_excess_fraction": "-1163/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 85,
+    "best_excess_fraction": "-1121/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 86,
+    "best_excess_fraction": "-1121/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 87,
+    "best_excess_fraction": "-57/14",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 88,
+    "best_excess_fraction": "-43/10",
+    "negative": true,
+    "number_of_ideals": 95
+  },
+  {
+    "excluded_sample_id": 89,
+    "best_excess_fraction": "-43/10",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 90,
+    "best_excess_fraction": "-733/182",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 91,
+    "best_excess_fraction": "-1100/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 92,
+    "best_excess_fraction": "-1142/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 93,
+    "best_excess_fraction": "-88/21",
+    "negative": true,
+    "number_of_ideals": 95
+  },
+  {
+    "excluded_sample_id": 94,
+    "best_excess_fraction": "-37/10",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 95,
+    "best_excess_fraction": "-1142/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 97,
+    "best_excess_fraction": "-4",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 98,
+    "best_excess_fraction": "-1163/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 99,
+    "best_excess_fraction": "-43/10",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 100,
+    "best_excess_fraction": "-55/14",
+    "negative": true,
+    "number_of_ideals": 89
+  },
+  {
+    "excluded_sample_id": 101,
+    "best_excess_fraction": "-1163/287",
+    "negative": true,
+    "number_of_ideals": 77
+  },
+  {
+    "excluded_sample_id": 102,
+    "best_excess_fraction": "-1163/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 103,
+    "best_excess_fraction": "-1163/287",
+    "negative": true,
+    "number_of_ideals": 72
+  },
+  {
+    "excluded_sample_id": 104,
+    "best_excess_fraction": "-55/14",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 105,
+    "best_excess_fraction": "-2831/546",
+    "negative": true,
+    "number_of_ideals": 95
+  },
+  {
+    "excluded_sample_id": 106,
+    "best_excess_fraction": "-167/35",
+    "negative": true,
+    "number_of_ideals": 95
+  },
+  {
+    "excluded_sample_id": 107,
+    "best_excess_fraction": "-4",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 109,
+    "best_excess_fraction": "-1121/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 110,
+    "best_excess_fraction": "-1121/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 111,
+    "best_excess_fraction": "-167/35",
+    "negative": true,
+    "number_of_ideals": 72
+  },
+  {
+    "excluded_sample_id": 112,
+    "best_excess_fraction": "-79/14",
+    "negative": true,
+    "number_of_ideals": 95
+  },
+  {
+    "excluded_sample_id": 113,
+    "best_excess_fraction": "-1163/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 114,
+    "best_excess_fraction": "-1163/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 115,
+    "best_excess_fraction": "-43/10",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 116,
+    "best_excess_fraction": "-4",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 117,
+    "best_excess_fraction": "-1142/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 118,
+    "best_excess_fraction": "-1142/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 119,
+    "best_excess_fraction": "-304/91",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 120,
+    "best_excess_fraction": "-57/14",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 121,
+    "best_excess_fraction": "-55/14",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 122,
+    "best_excess_fraction": "-59/14",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 123,
+    "best_excess_fraction": "-1121/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 124,
+    "best_excess_fraction": "-1163/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 125,
+    "best_excess_fraction": "-1163/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 126,
+    "best_excess_fraction": "-1163/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 127,
+    "best_excess_fraction": "-1142/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 128,
+    "best_excess_fraction": "-1121/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 129,
+    "best_excess_fraction": "-132/35",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 130,
+    "best_excess_fraction": "-1100/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 131,
+    "best_excess_fraction": "-1142/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 132,
+    "best_excess_fraction": "-59/14",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 133,
+    "best_excess_fraction": "-57/14",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 134,
+    "best_excess_fraction": "-1163/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 135,
+    "best_excess_fraction": "-1142/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 136,
+    "best_excess_fraction": "-1163/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 137,
+    "best_excess_fraction": "-1142/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 138,
+    "best_excess_fraction": "-29/7",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 139,
+    "best_excess_fraction": "-57/14",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 140,
+    "best_excess_fraction": "-30/7",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 141,
+    "best_excess_fraction": "-1997/546",
+    "negative": true,
+    "number_of_ideals": 95
+  },
+  {
+    "excluded_sample_id": 142,
+    "best_excess_fraction": "-4",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 143,
+    "best_excess_fraction": "-1142/287",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 144,
+    "best_excess_fraction": "-4",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 145,
+    "best_excess_fraction": "-55/14",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 146,
+    "best_excess_fraction": "-509/182",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 147,
+    "best_excess_fraction": "-4",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 148,
+    "best_excess_fraction": "-55/14",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 149,
+    "best_excess_fraction": "-4",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 151,
+    "best_excess_fraction": "-29/7",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 152,
+    "best_excess_fraction": "-57/14",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 153,
+    "best_excess_fraction": "-57/14",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 154,
+    "best_excess_fraction": "-55/14",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 155,
+    "best_excess_fraction": "-4",
+    "negative": true,
+    "number_of_ideals": 90
+  },
+  {
+    "excluded_sample_id": 156,
+    "best_excess_fraction": "-4",
+    "negative": true,
+    "number_of_ideals": 90
+  }
+]

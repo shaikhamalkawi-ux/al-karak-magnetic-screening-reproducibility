@@ -20,5 +20,7 @@ jobs:
       - run: python code/replay_reported_aggregates.py --root derived
       - run: python code/verify_ep14r3_novelty.py
       - run: python code/reproduce_from_site_measurements.py
+      - run: python code/verify_stratified_no_go.py
+      - run: python code/verify_sorted_readings_no_go.py
       - run: sha256sum -c derived/SHA256SUMS.txt
       - run: sha256sum -c SHA256SUMS.txt

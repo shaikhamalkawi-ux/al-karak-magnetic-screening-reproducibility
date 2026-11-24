@@ -1,6 +1,6 @@
 # Reviewer replay for the Al-Karak screening paper
 
-**Current manuscript:** EP14R4 (submission candidate, 24 November 2026), retaining the EP14R3 decision calculations with an openly released site-level numerical dataset. Full numerical site-level field, laboratory and chemistry values are openly available in data/AlKarak_2009_Matched_SiteMeasurements_115.csv (115 rows, of which 114 are chemistry-complete). For fixed data and code, use [commit a3d2a2f9](https://github.com/shaikhamalkawi-ux/al-karak-magnetic-screening-reproducibility/tree/a3d2a2f9ffa04da3f951211d9f59e046b3424eba). See [source replay certificate](SITE_LEVEL_REPLAY_CERTIFICATE.md).
+**Current manuscript:** EP14R6 (author-review candidate, 25 November 2026), with EP14R3 paired-budget results retained, public site-level numerical data unchanged, and the EP14R5 high-first feasibility certificate source- and field-order clarified. Full numerical site-level field, laboratory and chemistry values are openly available in data/AlKarak_2009_Matched_SiteMeasurements_115.csv (115 rows, of which 114 are chemistry-complete). For fixed data and code, use [commit a3d2a2f9](https://github.com/shaikhamalkawi-ux/al-karak-magnetic-screening-reproducibility/tree/a3d2a2f9ffa04da3f951211d9f59e046b3424eba). See [source replay certificate](SITE_LEVEL_REPLAY_CERTIFICATE.md).
 
 **Repository:** https://github.com/shaikhamalkawi-ux/al-karak-magnetic-screening-reproducibility
 
@@ -17,6 +17,8 @@ python code/verify_source_free.py --root derived
 python code/replay_reported_aggregates.py --root derived
 python code/reproduce_from_site_measurements.py
 python code/verify_ep14r3_novelty.py
+python code/verify_stratified_no_go.py
+python code/verify_sorted_readings_no_go.py
 ```
 
 The generic code checks (synthetic inputs) verify exact tie handling, budget preferences, and invalid input rejection. The **aggregate-data** checks independently recompute, from the publicly released frozen tables:
@@ -54,3 +56,7 @@ The original five aggregate CSVs remain frozen; the MDPI manuscript and suppleme
 ## Full numerical input
 
 The direct input used by the new `python code/reproduce_from_site_measurements.py` script is `data/AlKarak_2009_Matched_SiteMeasurements_115.csv` (115 rows; 114 analysed). The original, aggregate-only CSV files remain in `derived/`. This site-level release is the relevant starting point for an independent calculation audit. See `data/DATA_DICTIONARY.md` for the instrument support and historical presentation/source discrepancy.
+
+## Extended EP14R6 screening feasibility audit
+
+To test the finite class of strict high-first MS2D selections, run `python code/verify_stratified_no_go.py` from the repository root (about 20 seconds on a typical laptop); it enumerates 5,209 precedence pairs, 90 admissible 23-site sets, all six-/four-/three-group budgets through k=46, and 114 deletion tests with exact fractions. The separate, faster `python code/verify_sorted_readings_no_go.py` treats four field readings as unlabeled replicates and checks order-statistic dominance, 5,778 pairs, 11 23-site sets, and a -6 best excess for the six-group comparator. The 2013 report/2011 final-report sampling months disagree and are disclosed, not inferred. See [scope and evidence note](EP14R6_POLICY_AND_PROVENANCE.md). The published proof certificates are *within-cohort*, not prospective policy results.
